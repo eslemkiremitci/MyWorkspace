@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    h1= title
+    a(href='/notes/add') Yeni Not Ekle
+    ul
+      each note in notes
+        li
+          h2= note.title
+          p= note.content
+          a(href=`/notes/edit/${note.id}`) Düzenle

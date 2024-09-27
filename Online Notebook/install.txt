@@ -1,0 +1,6 @@
+npm init -y
+npm install express
+npm install pug 
+npm install jest supertest
+npm install express-session 
+npm install body-parser

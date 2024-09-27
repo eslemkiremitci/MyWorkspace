@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    h1= title
+    form(action='/notes/add', method='post')
+      div
+        label(for='title') Başlık:
+        input(type='text', name='title', required)
+      div
+        label(for='content') İçerik:
+        textarea(name='content', required)
+      button(type='submit') Kaydet
+    a(href='/notes') Notlara Dön
