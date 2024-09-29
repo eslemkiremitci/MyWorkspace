@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head lang="tr">
+    </head>
+
+    <body>
+
+        <h1>ÜYE KAYIT FORMU</h1>
+        <!--
+            action = Bu veriler nereye gidecek bacım onu gösteriyor.
+            method = veriler görünerek mi gitsin görünmeden mi 
+            onu gösteriyor. POST (göremek istemez isek) GET (görmek istersek)
+            required=boş bırakılamaz. uyarır... Adj... talep edilmiş.
+        -->
+        <form name="kayit" action="kayit.php" method="GET" >
+           <label for="fname"> Ad Soyad:</label>
+           <br>
+           <input type="text" name="fname" id="fname" 
+            size="20" maxlength="30" required>
+            <br><br>
+
+            Email: <input type="email" name="email" id="idemail"
+            size="20" maxlength="30" required>
+            <br><br>
+
+            Web Sitesi: <input type="url" name="adres" id="idadres"
+            size="20" maxlength="30">
+            <br><br>
+
+            Yaş: <input type="number" name="yas" id="idyas"
+            size="20" maxlength="30" required>
+            <br><br>
+            <input type="submit" value="Tamam">
+            <input type="reset" value="Temizle">
+            <br><br><br><br><br><br>
+        </form>
+
+        <!--Formun düzgün görünmesi için table ile yapıyorum -->
+
+        <form name="kayıt2" action="kayit2.aspx" method="POST">
+            <table border="1">
+                <tr><td>Ad Soyad:</td><td><input type="text" name="adsoyad" id="idadsoyad" 
+                size="20" maxlength="30" required></td></tr>
+                
+                <tr><td>Email:</td><td><input type="email" name="email" id="idemail" 
+                size="20" maxlength="30" required></td></tr>
+
+                <tr><td></td><td colspan="1"><input type="submit" value="Tamam">
+                <input type="reset" value="Temizle"></td></tr>
+            </table>
+        </form>
+
+        <!--
+• size: form elemanının genişliği
+• value: form elemanının değeri
+• placeholder: form elemanında bir açıklama metni görünmesini sağlar.
+• name: form elemanının benzersiz adı.
+• id: form elemanının tanım kodu. css veya JS kodu uygulamak için kullanılır.
+• autofocus: sayfa açıldığında fare imlecinin form elemanını aktif etmesini sağlar.
+• autocomplete: formlara girilen verilerin daha önce girilen veriler dikkate
+alınarak tamamlanmasını sağlar.
+• maxlenght: form elemanına girilebilecek maksimum karakter miktarını belirler.
+• required: form elemanın mutlaka doldurulması gerektiğini belirtir. form
+elemanı boş bırakılırsa hata mesajı alırsınız.
+• disabled: form elemanının pasif hale getirilmesini ve kullanılmamasını sağlar
+        -->
+
+        <br><br><br><br><br><br>
+        
+        <form  autocomplete="on" name="kayit3" action="kayit.php" method="GET" >
+            Ad Soyad: <input type="text" name="adsoyad" id="idadsoyad" 
+            size="20" maxlength="30" value="eslem kiremitci" required>
+            <br>
+            <br>
+            Email: <input type="email" name="email" id="idemail"
+            size="20" maxlength="30" placeholder="ad soyad yaz.." required>
+            <br>
+            <br>
+            Web Sitesi: <input type="url" name="adres" id="idadres"
+            size="20" maxlength="30">
+            <br>
+            <br>
+            Yaş: <input type="number" name="yas" id="idyas"
+            size="20" maxlength="30" required disabled>
+            <br>
+            <br>
+            Öneri: <textarea name="oneri" id="idoneri"
+            rows="5" cols="40"></textarea>
+            <br>
+            <br>
+            <input type="checkbox" name="bulten">Bülten abone ol
+            <br>
+            <input type="checkbox" name="medeni">Evliyim
+            <br><br>
+
+            <input type="submit" value="Tamam">
+            <input type="reset" value="Temizle">
+        </form>
+
+        <br><br><br><br>
+
+        <h1>Seçenek Kutusu</h1>
+        <form autocomplete="on">
+            <!--tek bir seçeneği seçmesini istiyorsam radio-->
+            <!--checked seçili gelmesini sağlar başta-->
+            <h2>Sevdiğiniz Spor</h2>
+            <input type="radio" name="spor" value="futbol"checked>Futbol
+            <input type="radio" name="spor" value="bisiklet">Bisiklet
+            <input type="radio" name="spor" value="voleybol">Voleybol
+            <br>
+            <input type="submit" value="Tamam">
+            <input type="reset" value="Temizle">
+
+        </form>
+        
+         <!--çok fazla seçenek varsa radio kullanamam-->
+         <!--combobox-->
+         <h1>Combobox</h1>
+         <form>
+            <select name="dyeri" id="iddyeri">
+                <option>Ankara</option>
+                <option>Kayseri</option>
+                <option>Konya</option>
+                <option>Seydişehir</option>
+                <option>Beyşehir</option>
+                <option>İstanbul</option>
+                <option>Kocaeli</option>
+                <option selected>İzmir</option>
+            </select>
+            <br>
+            <input type="submit" value="Tamam">
+            <input type="reset" value="Temizle">
+
+         </form>
+
+         <!--resimle onaylama-->
+
+         <h1>Resimli onaylama</h1>
+         <form name="onay" action="onay.php" id="idonay" method="GET">
+            Ad Soyad: <input type="text" name="adsoyad">
+            <br>
+            Şifre: <input type="password" name="parola" required>
+            <input type="image" src="gokce.jpg" width="80">
+         </form>
+
+
+    </body>
+</html>
