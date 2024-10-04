@@ -32,22 +32,7 @@ function selamVer() {
   let sonuc1 = topla(4, 7);
   console.log("Toplam:", sonuc1);  // 11
   
-  // 5. Varsayılan Parametre Kullanımı
-  function carp(a, b = 1) {
-    return a * b;
-  }
-  
-  console.log(carp(5));  // 5 (çünkü b parametresi verilmedi ve varsayılan değeri 1)
-  console.log(carp(5, 2));  // 10 (5 * 2)
-  
-  // 6. Return İfadesi ve Fonksiyonun Sonlanması
-  function cikar(a, b) {
-    return a - b;
-  }
-  
-  let sonuc2 = cikar(10, 3);
-  console.log("Fark:", sonuc2);  // 7
-  
+
   function test() {
     return "İlk return";
     console.log("Bu satır çalışmaz.");  // Bu satır çalışmayacak çünkü return sonrasında.
@@ -55,22 +40,7 @@ function selamVer() {
   
   console.log(test());  // "İlk return"
   
-  // 7. İç İçe Fonksiyonlar
-  function disFonksiyon() {
-    console.log("Dış fonksiyon çalışıyor!");
-  
-    function icFonksiyon() {
-      console.log("İç fonksiyon çalışıyor!");
-    }
-  
-    icFonksiyon();
-  }
-  
-  disFonksiyon();
-  // Çıktı:
-  // Dış fonksiyon çalışıyor!
-  // İç fonksiyon çalışıyor!
-  
+
   // 8. Anonim Fonksiyonlar
   setTimeout(function () {
     console.log("Bu mesaj 2 saniye sonra gösterilecek.");
@@ -85,11 +55,7 @@ function selamVer() {
     }, 3000);
   }
   
-  function bitisMesaji() {
-    console.log("İşlem tamamlandı.");
-  }
-  
-  uzunSurenIslem(bitisMesaji);
+
   
   // 10. Rest Parametreleri
   function toplaRest(...sayilar) {
@@ -130,5 +96,5 @@ function selamVer() {
     },
   };
   
-  obje.selamVer();  // "Ahmet diyor ki: Merhaba!"
+  obje.selamVer();  
   

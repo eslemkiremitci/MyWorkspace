@@ -1,8 +1,16 @@
+//Array Oluşturma:
+//1
 let meyveler = ["Elma", "Muz", "Çilek"];
 console.log(meyveler);  // ["Elma", "Muz", "Çilek"]
 
+//2
 let sayilar = new Array(1, 2, 3, 4, 5);
 console.log(sayilar);  
+
+
+
+
+
 
 let indeks = sayilar.indexOf(5); //indexOf(): Belirtilen elemanın dizideki indeksini döner.
 console.log(indeks);  
@@ -12,6 +20,10 @@ console.log(varMi);  // true (30 dizide var)
 
 sayilar.reverse();
 console.log(sayilar); 
+
+
+
+
 
 for (let i = 0; i < meyveler.length; i++) {
     console.log(meyveler[i]);

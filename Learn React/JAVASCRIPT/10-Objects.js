@@ -28,8 +28,8 @@ let yeniAraba = Object.assign({}, araba);
 console.log(yeniAraba);  // Kopyalanmış nesne
 
 
-let yeniOgrenci = { ...ogrenci };
-console.log(yeniOgrenci);  // Kopyalanmış nesne
+//let yeniOgrenci = { ...ogrenci };
+//console.log(yeniOgrenci);  // Kopyalanmış nesne
 
 
 //new Object() ile Tanımlama
