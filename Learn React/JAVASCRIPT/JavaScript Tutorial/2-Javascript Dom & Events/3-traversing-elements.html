@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <div class="card-header">
+        <h3 id="title">Todo App</h3>
+      </div>
+  
+      <ul id="task-list">
+        <li class = "task">Görev 1</li>
+  
+        <li class = "task">Görev 2</li>
+  
+        <li class = "task">Görev 3</li>
+      </ul>
+
+
+    <script>
+        let sonuc;
+
+        //children (bir alt elemana ulaşma)
+        ul = document.getElementById("task-list");
+        sonuc = ul.children;
+        sonuc = ul.children[0];
+        sonuc = ul.firstElementChild;
+        sonuc = ul.lastElementChild;
+        console.log(sonuc);
+
+        //parentElement (bir üst elemana ulaşma)
+        sonuc = document.getElementById("title").parentElement;
+        console.log(sonuc);
+
+        //nextElementSibling previousElementSibling (Aynı seviyede elemanlara ulaşma)
+        sonuc = document.querySelector(".task").nextElementSibling;
+        console.log(sonuc);
+
+        sonuc = document.querySelector(".task").nextElementSibling.nextElementSibling;
+        console.log(sonuc);
+
+        sonuc = document.querySelector(".task").nextElementSibling.previousElementSibling;
+        console.log(sonuc);
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-header">
+      <h3 id="title">Todo App</h3>
+    </div>
+
+    <ul id="task-list">
+      <li>Görev 1</li>
+
+      <li>Görev 2</li>
+
+      <li>Görev 3</li>
+    </ul>
+
+    <script>
+      let sonuc;
+
+      sonuc = document.getElementById("title");
+      console.log(sonuc);
+      sonuc = document.getElementById("title").id;
+      console.log(sonuc);
+
+      document.getElementById("title").style.fontSize = "90px";
+      document.getElementById("title").style.color = "blue";
+
+      //document.getElementById("title").style.display = "none";
+
+      //yazı değiştirme.
+      document.getElementById("title").innerText = "Todo App";
+      document.getElementById("title").innerHTML = "<p>Todo App</p>";
+
+      //title isminde ilk elemanı seç demek istiyorum.
+      sonuc = document.querySelector("#title");
+      //class olarak ulaşmak istersem.
+      sonuc = document.querySelector(".card-header");
+      //etiket ismine göre ulaşmak istiyorsam. İlk elemanı seç demek istiyorum div'den.
+      sonuc = document.querySelector("div");
+
+
+      sonuc = document.querySelector("li");
+      sonuc = document.querySelector("li:first-child");
+      sonuc = document.querySelector("li:last-child");
+      sonuc = document.querySelector("li:nth-child(2)");
+
+    </script>
+  </body>
+</html>

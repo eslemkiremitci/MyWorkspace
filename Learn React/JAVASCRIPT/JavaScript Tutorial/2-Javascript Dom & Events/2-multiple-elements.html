@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-header">
+        <h3 class ="cart-title h1" id="title">Todo App</h3>
+      </div>
+  
+      <ul id="task-list">
+        <li class = "task">Görev 1</li>
+  
+        <li class = "task">Görev 2</li>
+  
+        <li class = "task">Görev 3</li>
+
+        <li class = "task">Görev 4</li>
+
+        <li class = "task">Görev 5</li>
+
+        <li class = "task">Görev 6</li>
+        
+        <li class = "task">Görev 7</li>
+      </ul>
+
+      <ul id="task-list2">
+        <li class = "task">Görev 1</li>
+  
+        <li class = "task">Görev 2</li>
+  
+        <li class = "task">Görev 3</li>
+      </lu>
+
+  
+      <script>
+        let sonuc;
+        sonuc = document.getElementsByClassName("task")[0];
+        console.log(sonuc);
+
+        taskList = document.getElementsByClassName("task");
+
+        for(let i = 0; i<taskList.length; i++) {
+          console.log(taskList[i])
+        }
+
+        // in dersem index numaralarına ulaşırım.
+        // of dersem elemanlara ulaşmış oluyorum.
+        for (let task of taskList) {
+          console.log(task);
+        }
+
+
+
+        ul = document.getElementById("task-list2");
+        taskList2 = ul.getElementsByTagName("li");
+
+        for(let task of taskList2) {
+          task.style.color = "red";
+        }
+
+
+        /* TÜM ELEMANLAR SEÇİLİR BURADA
+        taskList = document.querySelectorAll("li");
+        for (let task of taskList) {
+          task.style.color = "pink";
+        }
+        */
+
+        //KAPSAM BELİRTEBİLİRİM.
+        taskList = document.querySelectorAll("#task-list li");
+        for (let task of taskList) {
+          task.style.color = "pink";
+        }
+
+
+
+
+
+
+
+
+
+      </script>
+    
+</body>
+</html>
