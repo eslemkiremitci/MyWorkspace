@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    h1= title
+    if error
+      p(style='color: red;')= error
+    if success
+      p(style='color: green;')= success
+    form(action='/profile/update', method='post')
+      div
+        label(for='username') Kullanıcı Adı:
+        input(type='text', name='username', value=username, required)
+      div
+        label(for='oldPassword') Eski Şifre:
+        input(type='password', name='oldPassword', required)
+      div
+        label(for='newPassword') Yeni Şifre:
+        input(type='password', name='newPassword', required)
+      button(type='submit') Güncelle
+    a(href='/') Ana Sayfaya Dön

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+
+  <head> 
+    <meta charset="UTF-8">
+    <title>Tablo oluşturma</title>
+  </head>
+
+
+  <body>
+    <h1>TABLO OLUŞTURMA</h1>
+
+    <br><br><br>
+
+
+    <table border="2">
+        <tr><td>Adı:</td><td>eslem</td></tr>
+        <tr><td>Soyadı:</td><td>krmtc</td></tr>
+    </table>
+
+
+    <br><br><br>
+
+
+    <table border="8">
+        <caption>Ülke Nüfusları</caption>
+
+        <thead> <!--KALIN-->
+            <tr><th>Ülke</th><th>Nüfus</th></tr>
+        </thead>
+
+
+        <tbody>
+            <tr><td>Türkiye</td><td>80000000</td></tr>
+            <tr><td>Yunanistan</td><td>12000000</td></tr>
+            <tr><td>Bulgaristan</td><td>9000000</td></tr>
+        </tbody>
+
+
+        <tfoot>
+            <tr><td>toplam:</td><td>101000000</td></tr>
+        </tfoot>  
+    </table>
+
+
+    <br><br><br>
+
+    
+    <table border="10">
+        <!--colspan: satırlardaki hücreleri birleştirir.-->
+        <!--rowspan: sütunlardaki hücreleri birleştirir.-->
+        <caption>Ülke Nüfusları</caption>
+        <thead> <!--KALIN-->
+            <tr><th>Ülke</th><th>Nüfus</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Türkiye</td><td>80000000</td></tr>
+            <tr><td>Yunanistan</td><td>12000000</td></tr>
+            <tr><td>Bulgaristan</td><td>9000000</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="2" >toplam:101000000</td></tr>
+        </tfoot>
+        
+
+    </table>
+
+  </body>
+</html>
